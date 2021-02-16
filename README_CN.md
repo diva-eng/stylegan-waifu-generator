@@ -10,7 +10,7 @@ Generate your waifu with styleGAN [English](README.md)
 这个网络的训练数据来源于[gwern](https://www.gwern.net/About)
 
 ```
-Anonymous, The Danbooru Community, & Gwern Branwen; “Danbooru2020: A Large-Scale Crowdsourced and Tagged Anime Illustration Dataset”, 2020-01-12. Web. Accessed [DATE] https://www.gwern.net/Danbooru2020
+Anonymous, The Danbooru Community, & Gwern Branwen; “Danbooru2020: A Large-Scale Crowdsourced and Tagged Anime Illustration Dataset”, 2020-01-12. Web. Accessed July, 2020 https://www.gwern.net/Danbooru2020
 ```
 我也花了一些时间自己写了一些脚本来清理这些数据，主要就是去掉一些无效的数据（黑白，nsfw，分辨率低）。danbooru2019的数据量非常大，在处理前整个数据差不多要有2tb左右，处理之后的头部有效数据只有18GB （512px）。之后数据被处理成一个lmdb的数据库方便训练，lmdb数据里也存有不同尺寸的数据，从8px到1024px。最后的lmdb数据库在426gb左右。
 
@@ -27,7 +27,7 @@ Anonymous, The Danbooru Community, & Gwern Branwen; “Danbooru2020: A Large-Sca
 
 ![256px](res/000017.png)
 
-## Control
+## 控制
 这个项目其实没有太多我自己原创的东西，因为为了学习很多东西都是用的网上现有的代码。唯一的区别就是我想设计一个可以自己控制生成结果的系统。在stylegan里面输入的latent vector貌似可以来控制生成结果，如果在同样的环境运行是可以出一样的结果的。我用rust写了一个小工具[rust-genome](https://github.com/r1cebank/genome) 来生成很长的一个哈希值来储存网络使用的latent vector这样可以很容易的存储和传输，使用同样的哈希值可以获得同样的结果。这样我们既可以控制结果还可以无数次的重复同一结果。
 
 生成的基因哈希值:

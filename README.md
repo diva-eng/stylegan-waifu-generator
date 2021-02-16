@@ -10,7 +10,7 @@ This is a pet project I've been working on, trained over months using the Danboo
 I am using Danbooru 2019 dataset from [gwern](https://www.gwern.net/About)
 
 ```
-Anonymous, The Danbooru Community, & Gwern Branwen; “Danbooru2020: A Large-Scale Crowdsourced and Tagged Anime Illustration Dataset”, 2020-01-12. Web. Accessed [DATE] https://www.gwern.net/Danbooru2020
+Anonymous, The Danbooru Community, & Gwern Branwen; “Danbooru2020: A Large-Scale Crowdsourced and Tagged Anime Illustration Dataset”, 2020-01-12. Web. Accessed July, 2020 https://www.gwern.net/Danbooru2020
 ```
 I cleaned the dataset a bit removing invalid pictures and cropped faces and only perserved high definition ones. The resulting training data is around 18GB for 512px square, later the samples are resized and converted to lmdb, the entire lmdb dataset is around 426GB
 
