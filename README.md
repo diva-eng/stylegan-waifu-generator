@@ -48,7 +48,8 @@ This also enables genome mixing (style mixing), merging of the generated results
 Trained model for 256px and 512px is posted in release https://github.com/diva-eng/stylegan-waifu-generator/releases/
 
 ## Generation
-Using the provided generate.py
+Using the provided generate.py, modify the device variable according to your running environment.
+
 ### With CUDA
 ```python
 device = 'cuda'
