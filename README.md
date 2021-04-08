@@ -64,6 +64,8 @@ python generate.py --size 512 --ckpt checkpoint/790000.pt
 ```
 *Note: you must provide the size in the parameter matching the size of the checkpoint.
 
+## Style-mixing and deterministic generation
+This part require other projects I am working on, will write up a instruction for it later.
 
 ## Special thanks
 Danbooru 2019 dataset
