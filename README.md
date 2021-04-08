@@ -45,7 +45,23 @@ This also enables genome mixing (style mixing), merging of the generated results
 ![interpolation](res/out.gif)
 
 ## Trained model
-Will be providing checkpoints (.pt) files later once i figured out how to share large files. The generation script and data cleaning script will also be provided later.
+Trained model for 256px and 512px is posted in release https://github.com/diva-eng/stylegan-waifu-generator/releases/
+
+## Generation
+Using the provided generate.py
+### With CUDA
+```python
+device = 'cuda'
+```
+### With CPU
+```python
+device = 'cpu'
+```
+
+```
+python generate.py --size 512 --ckpt checkpoint/790000.pt
+```
+*Note: you must provide the size in the parameter matching the size of the checkpoint.
 
 
 ## Special thanks
